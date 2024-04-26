@@ -1,0 +1,49 @@
+os.system("tput setaf 1")
+print("\t\t\tWELCOME TO LINUX OPERATING SYSTEM")
+print("\t\t\t-----------------------------------------")
+
+while True:
+ os.system("tput setaf 3")
+ print("\t\t\t\tMENU")
+ print("""
+ Press 1: To see date and time
+ Press 2: To see calendar
+ Press 3: To add user
+ Press 4: To create a directory
+ Press 5: To see the list of directories 
+ Press 6: To look at present directory
+ Press 7: To see the list of Python libraries
+ Press 8: To open Firefox browser
+ Press 9: To exit
+ """)
+ os.system("tput setaf 7")
+ ch=int(input("Enter your choice:"))
+ print("Your choice is",ch)
+ if int(ch)==1:
+  os.system("date")
+ elif int(ch)==2:
+  os.system("cal")
+ elif int(ch)==3:
+  uname=input("Enter the username:")
+  cbuild=f"useradd {uname}"
+  os.system(cbuild)
+ elif int(ch)==4:
+  dname=input("Enter directory name:")
+  cbuild=f"mkdir {dname}"
+  os.system(cbuild)
+ elif int(ch)==5:
+  os.system("ls")
+ elif int(ch)==6:
+  os.system("pwd")
+ elif int(ch)==7:
+  os.system("pip list")
+ elif int(ch)==8:
+  os.system("firefox")
+ elif int(ch)==9:
+  print("---------Exiting the program----------")
+  exit()
+ else:
+  print("No support")
+ input("Press enter to continue....")
+ 
+ os.system("clear")

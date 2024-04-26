@@ -1,0 +1,23 @@
+import cv2
+
+# Loading the 2 images that we want to swap parts from
+img3= cv2.imread('image3.jpg')
+img4 = cv2.imread('image4.jpg')
+
+# Define the regions to be cropped from each image
+crp1 = image3[100:300, 200:400]
+crp2 = image4[50:250, 250:450]
+
+# Swap the cropped parts
+img3[100:300, 200:400] = crop2
+img4[50:250, 250:450] = crop1
+
+# Saving the final images
+cv2.imwrite('image3_swapped.jpg', image3)
+cv2.imwrite('image4_swapped.jpg', image4)
+
+# Display the modified images (optional)
+cv2.imshow('Image 1 Swapped', image3)
+cv2.imshow('Image 2 Swapped', image4)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
